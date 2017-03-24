@@ -10,6 +10,17 @@ jobBoard.factory("Job", function($resource) {
   });
 });
 
+jobBoard.directive('myModal', function() {
+   return {
+     restrict: 'A',
+     link: function(scope, element, attr) {
+       scope.dismiss = function() {
+           element.modal('hide');
+       };
+     }
+   }
+});
+
 jobBoard.controller("jobsController", function($scope, Job) {
   $scope.jobs = Job.index();
 
@@ -25,9 +36,10 @@ jobBoard.controller("jobsController", function($scope, Job) {
     $scope.jobToEdit = job;
   }
 
-  $scope.saveEditJob = function() {
+  $scope.saveJob = function() {
     edittedJob = $scope.jobs[$scope.jobToEditIndex];
     Job.update(edittedJob, $scope.jobToEdit);
+    $scope.dismiss();
   }
 
   $scope.deleteJob = function(index) {
