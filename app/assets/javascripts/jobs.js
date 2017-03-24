@@ -1,7 +1,4 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
-
-var jobBoard = angular.module('jobBoard', ['ngResource']);
+var jobBoard = angular.module('jobBoard', ['ngResource', 'templates']);
 
 jobBoard.factory("Job", function($resource) {
   return $resource("jobs/:id", { id: '@id' }, {
@@ -18,6 +15,16 @@ jobBoard.directive('myModal', function() {
            element.modal('hide');
        };
      }
+   }
+});
+
+jobBoard.directive('jobForm', function() {
+   return {
+     restrict: 'A',
+     scope: {
+       job: '=',
+     },
+     templateUrl: "jobForm.html",
    }
 });
 

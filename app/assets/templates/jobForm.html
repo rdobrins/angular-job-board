@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-xs-2 text-center">
+    <h4>Date:</h4>
+  </div>
+  <div class="col-xs-4">
+    <input type="text" ng-model="job.date" class="form-control datepicker" placeholder="Date" />
+  </div>
+  <div class="col-xs-2 text-center">
+    <h4>Job Poster:</h4>
+  </div>
+  <div class="col-xs-4">
+    <input type="text" ng-model="job.author" class="form-control" placeholder="Job Poster" />
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-2 text-center">
+    <h4>Location:</h4>
+  </div>
+  <div class="col-xs-4">
+    <select class="form-control" ng-model="job.location">
+      <option value="Allston">Allston</option>
+      <option value="Boston">Boston</option>
+      <option value="Brookline">Brookline</option>
+      <option value="Cambridge">Cambridge</option>
+      <option value="Watertown">Watertown</option>
+    </select>
+  </div>
+  <div class="col-xs-2 text-center">
+    <h4>Category:</h4>
+  </div>
+  <div class="col-xs-4">
+    <select class="form-control" ng-model="job.category">
+      <option value="Landscaping">Landscaping</option>
+      <option value="Cleaning">Cleaning</option>
+      <option value="Labor">General Labor</option>
+      <option value="Babysitting">Babysitting</option>
+      <option value="Tutoring">Tutoring</option>
+    </select>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-2 text-center">
+    <h4>Status:</h4>
+  </div>
+  <div class="col-xs-4">
+    <select class="form-control" ng-model="job.status">
+      <option value="New">New</option>
+      <option value="Pending">Pending</option>
+      <option value="Complete">Complete</option>
+    </select>
+  </div>
+</div>
