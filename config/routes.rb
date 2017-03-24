@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   #
   # get 'jobs/destroy'
 
-  # resources :jobs, only: [:index, :create, :destroy], defaults: {format: :json}
-  resources :jobs, defaults: {format: :json}
+  resources :jobs, only: [:index, :create, :update, :destroy], defaults: {format: :json}
   root to: "jobs#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

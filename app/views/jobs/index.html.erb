@@ -98,7 +98,7 @@
     </table>
 
     <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal fade" id="myModal" my-modal role="dialog">
       <div class="modal-dialog modal-lg">
 
         <!-- Modal content-->
@@ -108,7 +108,7 @@
             <h4 class="modal-title">Edit Job</h4>
           </div>
           <div class="modal-body">
-            <form ng-submit="saveEditJob()">
+            <form ng-submit="saveJob()">
               <div class="row">
                 <div class="col-xs-2 text-center">
                   <h4>Date:</h4>
@@ -164,7 +164,7 @@
               <div class="row">
                 <div class="col-xs-12 text-right">
                   <br />
-                  <input type="Submit" value="Save" class="btn btn-success btn-lg" data-dismiss="modal" />
+                  <input type="Submit" value="Save" class="btn btn-success btn-lg" />
                 </div>
               </div>
             </form>
