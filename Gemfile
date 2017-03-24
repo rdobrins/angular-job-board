@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'angularjs-rails', '~> 1.2.25'
 gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'responders', '~> 2.0'
+gem 'angular-rails-templates'
 
 group :development, :test do
   gem 'byebug'

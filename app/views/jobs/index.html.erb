@@ -6,58 +6,7 @@
       <h3>Add a New Job</h3>
       <br />
       <form ng-submit="addJob()">
-        <div class="row">
-          <div class="col-xs-2 text-center">
-            <h4>Date:</h4>
-          </div>
-          <div class="col-xs-4">
-            <input type="text" ng-model="newJob.date" class="form-control datepicker" placeholder="Date" />
-          </div>
-          <div class="col-xs-2 text-center">
-            <h4>Job Poster:</h4>
-          </div>
-          <div class="col-xs-4">
-            <input type="text" ng-model="newJob.author" class="form-control" placeholder="Job Poster" />
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-2 text-center">
-            <h4>Location:</h4>
-          </div>
-          <div class="col-xs-4">
-            <select class="form-control" ng-model="newJob.location">
-              <option value="Allston">Allston</option>
-              <option value="Boston">Boston</option>
-              <option value="Brookline">Brookline</option>
-              <option value="Cambridge">Cambridge</option>
-              <option value="Watertown">Watertown</option>
-            </select>
-          </div>
-          <div class="col-xs-2 text-center">
-            <h4>Category:</h4>
-          </div>
-          <div class="col-xs-4">
-            <select class="form-control" ng-model="newJob.category">
-              <option value="Landscaping">Landscaping</option>
-              <option value="Cleaning">Cleaning</option>
-              <option value="Labor">General Labor</option>
-              <option value="Babysitting">Babysitting</option>
-              <option value="Tutoring">Tutoring</option>
-            </select>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-2 text-center">
-            <h4>Status:</h4>
-          </div>
-          <div class="col-xs-4">
-            <select class="form-control" ng-model="newJob.status">
-              <option value="New">New</option>
-              <option value="Pending">Pending</option>
-              <option value="Complete">Complete</option>
-            </select>
-          </div>
-        </div>
+        <div job-form job="newJob"></div>
         <div class="row">
           <div class="col-xs-12 text-right">
             <br />
@@ -109,58 +58,7 @@
           </div>
           <div class="modal-body">
             <form ng-submit="saveJob()">
-              <div class="row">
-                <div class="col-xs-2 text-center">
-                  <h4>Date:</h4>
-                </div>
-                <div class="col-xs-4">
-                  <input type="text" ng-model="jobToEdit.date" class="form-control datepicker" placeholder="Date" />
-                </div>
-                <div class="col-xs-2 text-center">
-                  <h4>Job Poster:</h4>
-                </div>
-                <div class="col-xs-4">
-                  <input type="text" ng-model="jobToEdit.author" class="form-control" placeholder="Job Poster" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-2 text-center">
-                  <h4>Location:</h4>
-                </div>
-                <div class="col-xs-4">
-                  <select class="form-control" ng-model="jobToEdit.location">
-                    <option value="Allston">Allston</option>
-                    <option value="Boston">Boston</option>
-                    <option value="Brookline">Brookline</option>
-                    <option value="Cambridge">Cambridge</option>
-                    <option value="Watertown">Watertown</option>
-                  </select>
-                </div>
-                <div class="col-xs-2 text-center">
-                  <h4>Category:</h4>
-                </div>
-                <div class="col-xs-4">
-                  <select class="form-control" ng-model="jobToEdit.category">
-                    <option value="Landscaping">Landscaping</option>
-                    <option value="Cleaning">Cleaning</option>
-                    <option value="Labor">General Labor</option>
-                    <option value="Babysitting">Babysitting</option>
-                    <option value="Tutoring">Tutoring</option>
-                  </select>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-2 text-center">
-                  <h4>Status:</h4>
-                </div>
-                <div class="col-xs-4">
-                  <select class="form-control" ng-model="jobToEdit.status">
-                    <option value="New">New</option>
-                    <option value="Pending">Pending</option>
-                    <option value="Complete">Complete</option>
-                  </select>
-                </div>
-              </div>
+              <div job-form job="jobToEdit"></div>
               <div class="row">
                 <div class="col-xs-12 text-right">
                   <br />
