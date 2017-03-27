@@ -18,11 +18,7 @@
   </div>
   <div class="col-xs-4">
     <select class="form-control" ng-model="job.location">
-      <option value="Allston">Allston</option>
-      <option value="Boston">Boston</option>
-      <option value="Brookline">Brookline</option>
-      <option value="Cambridge">Cambridge</option>
-      <option value="Watertown">Watertown</option>
+      <option ng-repeat="location in locations" value="{{location.value}}">{{location.name}}</option>
     </select>
   </div>
   <div class="col-xs-2 text-center">
@@ -30,11 +26,7 @@
   </div>
   <div class="col-xs-4">
     <select class="form-control" ng-model="job.category">
-      <option value="Landscaping">Landscaping</option>
-      <option value="Cleaning">Cleaning</option>
-      <option value="Labor">General Labor</option>
-      <option value="Babysitting">Babysitting</option>
-      <option value="Tutoring">Tutoring</option>
+      <option ng-repeat="category in categories" value="{{category.value}}">{{category.name}}</option>
     </select>
   </div>
 </div>
@@ -44,9 +36,7 @@
   </div>
   <div class="col-xs-4">
     <select class="form-control" ng-model="job.status">
-      <option value="New">New</option>
-      <option value="Pending">Pending</option>
-      <option value="Complete">Complete</option>
+      <option ng-repeat="status in statuses" value="{{status.value}}">{{status.name}}</option>
     </select>
   </div>
 </div>
