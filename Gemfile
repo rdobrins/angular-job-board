@@ -10,6 +10,8 @@ gem 'angularjs-rails', '~> 1.2.25'
 gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'responders', '~> 2.0'
 gem 'angular-rails-templates'
+gem 'lodash-rails'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug'

@@ -52,6 +52,8 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
+    font-awesome-rails (4.7.0.1)
+      railties (>= 3.2, < 5.1)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.8.1)
@@ -60,6 +62,8 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.6)
+    lodash-rails (4.17.4)
+      railties (>= 3.1)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -137,7 +141,9 @@ DEPENDENCIES
   angularjs-rails (~> 1.2.25)
   bootstrap-sass (~> 3.2.0.2)
   byebug
+  font-awesome-rails
   jquery-rails
+  lodash-rails
   rails (= 4.2.6)
   responders (~> 2.0)
   sass-rails (~> 5.0)
