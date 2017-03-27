@@ -2,7 +2,7 @@
   <h1>Ryan's Job Board</h1>
 
   <div ng-controller="jobsController">
-    <div class="well text-center">
+    <div ng-hide="formClosed" class="well text-center">
       <h3>Add a New Job</h3>
       <br />
       <form ng-submit="addJob()">
@@ -10,11 +10,15 @@
         <div class="row">
           <div class="col-xs-12 text-right">
             <br />
-            <input type="Submit" value="Add Job" class="btn btn-success btn-lg" />
+            <a ng-click="closeForm()" class="btn btn-danger btn-lg">Cancel</a>
+            <input type="Submit" value="Post Job" class="btn btn-success btn-lg" />
           </div>
         </div>
       </form>
     </div>
+    <br />
+    <a ng-show="formClosed" ng-click="openForm()" class="pull-right btn btn-success btn-lg">Post New Job</a>
+    <br />
 
     <h3>Current Jobs</h3>
     <hr />

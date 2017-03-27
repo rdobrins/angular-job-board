@@ -30,6 +30,17 @@ jobBoard.directive('jobForm', function() {
 
 jobBoard.controller("jobsController", function($scope, Job) {
   $scope.jobs = Job.index();
+  $scope.formClosed = true;
+
+  $scope.openForm = function() {
+    $scope.formClosed = false;
+    $scope.newJob = {};
+  }
+
+  $scope.closeForm = function() {
+    $scope.formClosed = true;
+    $scope.newJob = {};
+  }
 
   $scope.addJob = function() {
     job = Job.save($scope.newJob);
