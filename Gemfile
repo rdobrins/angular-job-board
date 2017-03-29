@@ -15,6 +15,10 @@ gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :development do
