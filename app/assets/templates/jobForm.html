@@ -3,13 +3,13 @@
     <h4>Date:</h4>
   </div>
   <div class="col-xs-4">
-    <input type="text" ng-model="job.date" class="form-control datepicker" placeholder="Date" />
+    <input id="dateField" type="text" ng-model="job.date" class="form-control datepicker" placeholder="Date" />
   </div>
   <div class="col-xs-2 text-center">
     <h4>Job Poster:</h4>
   </div>
   <div class="col-xs-4">
-    <input type="text" ng-model="job.author" class="form-control" placeholder="Job Poster" />
+    <input id="authorField" type="text" ng-model="job.author" class="form-control" placeholder="Job Poster" />
   </div>
 </div>
 <div class="row">
@@ -17,7 +17,7 @@
     <h4>Location:</h4>
   </div>
   <div class="col-xs-4">
-    <select class="form-control" ng-model="job.location">
+    <select id="locationSelect" class="form-control" ng-model="job.location">
       <option ng-repeat="location in locations" value="{{location.value}}">{{location.name}}</option>
     </select>
   </div>
@@ -25,7 +25,7 @@
     <h4>Category:</h4>
   </div>
   <div class="col-xs-4">
-    <select class="form-control" ng-model="job.category">
+    <select id="categorySelect" class="form-control" ng-model="job.category">
       <option ng-repeat="category in categories" value="{{category.value}}">{{category.name}}</option>
     </select>
   </div>
@@ -35,7 +35,7 @@
     <h4>Status:</h4>
   </div>
   <div class="col-xs-4">
-    <select class="form-control" ng-model="job.status">
+    <select id="statusSelect" class="form-control" ng-model="job.status">
       <option ng-repeat="status in statuses" value="{{status.value}}">{{status.name}}</option>
     </select>
   </div>
